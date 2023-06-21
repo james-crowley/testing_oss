@@ -7,8 +7,13 @@ jobs:
     steps:
       - checkout # check out the code in the project directory
       - run: echo "hello world" # run the `echo` command
+      - run: echo $TEST_ENV_VAR_PROJECT # run the `echo` command
+      - run: echo $TESTING_CONTEXTS
+
 
 workflows:
   my-workflow:
     jobs:
-      - hello-job
+      - hello-job:
+          context:
+            - oss
