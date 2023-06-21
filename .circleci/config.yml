@@ -9,6 +9,7 @@ jobs:
       - run: echo "hello world" # run the `echo` command
       - run: echo $TEST_ENV_VAR_PROJECT # run the `echo` command
       - run: echo $TESTING_CONTEXTS
+      - run: echo "Testing fork secrets and contexts"
 
 
 workflows:
